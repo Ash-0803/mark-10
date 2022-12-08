@@ -5,16 +5,17 @@ cell = document.querySelectorAll('.no-of-notes');
 
 given = cashGiven.value;
 amt = billAmt.value;
-rtrn = amt-given;
+rtrn = given-amt;
 
 notes = [2000,500,100,20,10,5,1];
 
 function clickHandle(){
-  notes.forEach((item,index)=>{
-    noOfNotes = Math.trunc(rtrn/item)
-    cell[index].innerText = noOfNotes;
-    rtrn%=item;
+  notes.forEach((aNote,index)=>{
+    let noOfNotes = Math.floor(rtrn/aNote);
+    rtrn%=aNote;
+    cell[index].innerText = noOfNotes; 
+    console.log(aNote,index,noOfNotes);
   })
-}
+} 
 
 btn.addEventListener('click', clickHandle);
