@@ -1,15 +1,91 @@
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,700;1,400&family=Poiret+One&display=swap');
+
+  :root{
+    --prime-font: 'Nunito Sans', sans-serif;
+    --style-font: 'Poiret One', cursive;
+    --accent-color:#80d5ff;
+    --bg-color:#000919;
+    --box-shadow: 2px 2px #80d5ff;
+    --big-box-shadow: 5px 5px 0 #80d5ff;
+  }
   *,body {
   padding:0;
+  font-family:var(--prime-font);
+  color:var(--accent-color);
   box-sizing: border-box;
+}
+body{
+  background-color:var(--bg-color);
+}
+.main-head{
+  font-family:var(--style-font);
+  text-align: center;
+}
+.content{
+  font-size:1.3rem;
+  text-align: center  ;
+}
+.visible{
+  position:absolute;
+  top:12rem;
+  visibility: hidden;
+  width:70%;
 }
 .container{
   display:flex;
   flex-direction:column;
-  height:100%;
-  width:100%;
+  gap:1rem;
   justify-content: center;
   align-items: center;
+  height:50vh;
+  width: 60%;
+  margin:auto;
+  margin-top:5rem;
+  border: 1px solid var(--accent-color);
+  border-radius:2px;
+  padding:2rem;   
 }
 input{
-  width: 20vw;
+  height:2rem;
+  border: 1px solid var(--accent-color);
+  border-radius:2px;
+  background-color: var(--bg-color);
+  box-shadow:var(--box-shadow);
+}
+input:focus-visible {
+  outline:none;
+}
+button{
+  width:5rem;
+  padding:.3rem;
+  margin-left:4.4rem;
+  border-style: none;
+  background-color:var(--bg-color);
+  box-shadow: var(--box-shadow)
+}
+table{
+  width:100%;
+  overflow-x: auto;
+}
+table,td,th{
+  border: 1px solid var(--accent-color);
+  border-collapse:collapse;
+}
+td{
+  width:11%
+}
+
+@media(max-width:820px){
+  .container{
+    width:95%;
+    height:60vh;
+
+  }
+  .content{
+    visibility:hidden;
+  }
+  .visible{
+    visibility:visible;
+
+  }
 }

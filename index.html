@@ -8,16 +8,23 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <h1 class="main-head">Cash Register Manager</h1>
     <div class="container">
-      <h1 class="main-head">Cash Register Manager</h1>
       <p class="content">
         Enter the bill amount and cash given by the customer and deduce the
         minimum number of notes to return.
       </p>
-      <label for="cash-given">Cash given:</label>
-      <input id="cash-given" type="text" />
-      <label for="bill-amount">Bill amount:</label>
-      <input id="bill-amount" type="text" />
+      <span class="content visible"
+        >Deduce the change by filling the details below:</span
+      >
+      <div class="inpt">
+        <label for="cash-given">Cash given:</label>
+        <input id="cash-given" type="text" />
+      </div>
+      <div class="inpt">
+        <label for="bill-amount">Bill amount:</label>
+        <input id="bill-amount" type="text" />
+      </div>
       <button id="calculate" type="submit">Calculate</button>
       <table>
         <caption>
